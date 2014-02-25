@@ -48,11 +48,17 @@
     </script>
   </div>
 
-  <div id = 'question-4'>
+  <div id ='question-4'>
     <h2>Question 4</h2>
     <p>Make this paragraph's text fade out when you hover over it, and fade back in when you move your mouse elsewhere.</p>
     <script>
       // Question 4 Answer:
+      $('#question-4 > p').mouseover(function() {
+        $(this).fadeOut('slow');
+      })
+      $('#question-4 > p').mouseleave(function() {
+        $(this).fadeIn('slow');
+      })
 
     </script>
   </div>
@@ -63,6 +69,11 @@
     <input type='text' name='does-it-win' id='winning-box' />
     <script>
       // Question 5 Answer:
+      $('#winning-box').keypress( function() {
+        if ($('#winning-box').val() === 'Winning') {
+          $('#question-5 > h2').css('color', 'blue');
+        }
+      });
 
     </script>
   </div>
