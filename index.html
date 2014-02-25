@@ -16,6 +16,7 @@
 
   <script>
     // Question 1 Answer:
+    $('h2:first').addClass('question-1');
 
   </script>
   <div id = 'question-3'>
@@ -27,6 +28,8 @@
     </ul>
     <script>
       // Question 2 Answer:
+      $('#question-2-list').append('<li>Bunnies</li>');
+      $('#question-2-list').append('<li>Thumper</li>');
 
     </script>
   </div>
@@ -36,6 +39,10 @@
     <p>Add a click event handler to this paragraph, which triggers a global method called 'alertClicked', which will display an alert with the text of "Question 3 Success".</p>
     <script>
       // Question 3 Answer:
+      var alertClicked = function() {
+        alert('Question 3 Success');
+      };
+      $('#question-3 p').on('click', alertClicked);
 
     </script>
   </div>
@@ -45,7 +52,11 @@
     <p>Make this paragraph's text fade out when you hover over it, and fade back in when you move your mouse elsewhere.</p>
     <script>
       // Question 4 Answer:
-
+      $('#question-4 p').hover(function(){
+        $(this).fadeOut();
+      }, function(){
+        $(this).fadeIn();
+      });
     </script>
   </div>
 
@@ -55,7 +66,13 @@
     <input type='text' name='does-it-win' id='winning-box' />
     <script>
       // Question 5 Answer:
-
+      $('#winning-box').keyup(function(){
+        if ($(this).val() === 'winning' ) {
+          $('#question-5 h2').addClass('blue-text');
+        } else {
+          $('#question-5 h2').removeClass('blue-text');
+        }
+      });
     </script>
   </div>
 </body>
