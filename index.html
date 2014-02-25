@@ -11,11 +11,12 @@
 
   All needed DOM elements will be loaded before each answer, so no onload statements will be needed.
 
-  <h2>Question 1</h2>
+  <h2 id="first">Question 1</h2>
   <p>Use jQuery to add the class of 'question-1' to just this first h2 tag.
 
   <script>
     // Question 1 Answer:
+  $('.question-1').appendTo('#first');
 
   </script>
   <div id = 'question-3'>
@@ -27,6 +28,8 @@
     </ul>
     <script>
       // Question 2 Answer:
+    $('ul').append($('li'));
+    $('ul').append($('li'));
 
     </script>
   </div>
@@ -37,14 +40,23 @@
     <script>
       // Question 3 Answer:
 
+  $('p').click(function(alertClicked)){
+    alert("Question 3 Success");
+  };
+
     </script>
   </div>
 
   <div id = 'question-4'>
     <h2>Question 4</h2>
-    <p>Make this paragraph's text fade out when you hover over it, and fade back in when you move your mouse elsewhere.</p>
+    <p class='fade'>Make this paragraph's text fade out when you hover over it, and fade back in when you move your mouse elsewhere.</p>
     <script>
       // Question 4 Answer:
+
+    $("p.fade").hover(function() {
+    $(this).fadeOut(100);
+    $(this).fadeIn(500);
+    });
 
     </script>
   </div>
@@ -55,6 +67,8 @@
     <input type='text' name='does-it-win' id='winning-box' />
     <script>
       // Question 5 Answer:
+
+      $('h2').input
 
     </script>
   </div>
