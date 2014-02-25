@@ -54,10 +54,10 @@
     <script>
       // Question 4 Answer:
       $('#question-4 > p').mouseover(function() {
-        $(this).fadeOut('slow');
+        $(this).animate({ opacity: 0 }, 1500);
       })
       $('#question-4 > p').mouseleave(function() {
-        $(this).fadeIn('slow');
+        $(this).animate({ opacity: 1 }, 1500);
       })
 
     </script>
