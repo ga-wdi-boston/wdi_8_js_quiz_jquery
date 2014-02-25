@@ -69,9 +69,11 @@
     <input type='text' name='does-it-win' id='winning-box' />
     <script>
       // Question 5 Answer:
-      $('#winning-box').keypress( function() {
+      $('#winning-box').keydown( function() {
         if ($('#winning-box').val() === 'Winning') {
           $('#question-5 > h2').css('color', 'blue');
+        } else {
+          $('#question-5 > h2').css('color', 'black');
         }
       });
 
